@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>wohT17e</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+  <style>
+    .border {
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      margin: 6px;
+    }
+
+    .text-secondary {
+        color: gray;
+    }
+
+    a:link {
+        color: black;
+    }
+    a:link:hover {
+        color: gray;
+        text-decoration: none;
+    }
+
+    .panel-default {
+        border-top: 1px solid #a1a1a1;
+        border-bottom: none;
+    } 
+
+    </style>
+  
+</head>
+<body>
+
+    <nav class="navbar navbar-default" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Savonia</a>
+          </div>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Tunnus">
+            </div>
+          </form>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="Salasana">
+            </div>
+            <button type="submit" class="btn btn-success">Kirjaudu</button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Alkuun</a></li>
+            <li><a href="#">Wilma</a></li>
+            <li><a href="#">Reppu</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Työkalut
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Asetukset</a></li>
+                  <li><a href="#">Omat tiedot</a></li>
+                  <li><a href="#">Kirjaudu ulos</a></li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="container-fluid">
+            <form>
+                <div class="form-group">
+                    <label for="opiskelijanro">Opiskelijanumero</label>
+                    <input type="input" name="opiskelijanro" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="aloitusv">Aloitusvuosi</label>
+                    <input type="input" name="aloitusv" class="form-control"/>
+                </div>
+            </form>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                <label class="custom-control-label" for="defaultUnchecked">Muista minut</label>
+            </div>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Tarkista</button>
+        </div>
+    </div>
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Tietojen tarkistus</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Tarkista ovatko ao. tiedot oikein:</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Tallenna tiedot</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+    <div class="col-sm-8">
+
+        <div class="container-fluid">
+            <table class="table">
+                <thead class="">
+                    <tr>
+                        <th scope="col">Opintojakso</th>
+                        <th scope="col">Suorituspvm</th>
+                        <th scope="col">Arvosana</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ohjelmoinnin perusteet</td>
+                        <td>3.4.2016</td>
+                        <td>2/5</td>
+                    </tr>
+                    <tr>
+                        <td>Tietorakenteet ja algoritmit</td>
+                        <td>16.2.2016</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <td>Matematiikka I</td>
+                        <td>28.1.2015</td>
+                        <td>4/5</td>
+                    </tr>
+                    <tr>
+                        <td>Matematiikka II</td>
+                        <td>11.9.2015</td>
+                        <td>3/5</td>
+                    </tr>
+                    <tr>
+                        <td>Fysiikka I</td>
+                        <td>28.11.2014</td>
+                        <td>4/5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+<br>
+<br>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-sm-4">
+            <p class="text-secondary">&copy; 2017-2018</p>
+        </div>
+        <div class="col-sm-4">
+            <h4><b>Toimipaikat</b></h4>
+            <p>
+                <a href="#">Opistotie</a><br>
+                <a href="#">Technopolis</a><br>
+                <a href="#">Iisalmi</a><br>
+                <a href="#">Varkaus</a><br>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <h4><b>Tietoja</b></h4>
+            <p>
+                <a href="#">Yhteystiedot</a><br>
+                <a href="#">GDPR</a><br>
+                <a href="#">Ota yhteyttä</a><br>
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
