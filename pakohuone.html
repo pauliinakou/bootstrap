@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Poliisi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        #myDiv {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        body {
+            background-color: lightgrey;
+        }
+    </style>
+
+    <script>
+    function validateForm() {
+        var a = document.forms["Form"]["koodi"].value;
+
+        if (a == "OSAKRI")
+        {
+            $(document).ready(function(){
+                $("#myModal").modal();
+            });
+        }
+        
+        else 
+        {
+            alert("Väärä koodi!");
+            return false;
+        }
+    }
+
+    </script>
+</head>
+
+<body oncontextmenu="return false">
+    <div class="card bg-secondary text-black" style="width: 22rem; height: 18rem;" id="myDiv">
+        <div class="card-header"><h5 class="card-title">Poliisin tietokanta</h5></div>
+        <div class="card-body">
+            <p class="card-text">Syötä salasana kirjautuaksesi sisään poliisiraporttiin.</p>
+            <form method="post" name="Form" onsubmit="return validateForm();" action="">
+                <b>Syötä kirjautumiskoodi: <input id="koodi" type="password" name="koodi"> </b><br><br>
+                <button type="button" id="myBtn" onclick="validateForm();">Kirjaudu sisään</button>
+                <br>
+            </form> 
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">Raportti</h4>
+    </div>
+    <div class="modal-body">
+        Uhrilla
+        <ul>
+            <li>useita pistohaavoja rinnassa</li>
+            <li>leikkausarvet?</li>
+        </ul>
+        Toinen mahdollinen uhri lukittautunut WC tiloihin, ei avaa ovea pyydettäessä.
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
